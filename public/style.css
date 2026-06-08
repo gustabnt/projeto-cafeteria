@@ -1,48 +1,151 @@
-body {
-    font-family: Arial, sans-serif;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* FUNDO */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5e6d3, #fff8f0);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
 header {
-    background: #333;
+    background: #6f4e37;
     color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-nav {
-    margin-top: 10px;
+header h1 {
+    margin-bottom: 10px;
 }
 
+/* MENU */
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: inline-block;
 }
 
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* CONTEÚDO */
 main {
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
 }
 
-section {
-    margin-bottom: 30px;
+/* SEÇÕES */
+section, form {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #6f4e37;
+    margin-bottom: 15px;
+}
+
+/* IMAGEM */
+.hero-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* CARDÁPIO */
 ul {
-    list-style: square;
+    list-style: none;
 }
 
+ul li {
+    background: #f5e6d3;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background: #e6c8a0;
+    transform: scale(1.03);
+}
+
+/* FORMULÁRIO */
 form {
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #6f4e37;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
+input:focus,
+textarea:focus {
+    border-color: #6f4e37;
+    box-shadow: 0 0 10px rgba(111,78,55,0.3);
+    outline: none;
+}
+
+/* BOTÃO */
 button {
-    padding: 10px 20px;
+    margin-top: 15px;
+    background: #6f4e37;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8b5e3c;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
 }
